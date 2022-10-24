@@ -6,3 +6,5 @@ Stack:
 - CSS (SCSS)
 - Vanilla JS
 - Libraries: swiperjs
+
+*main commit
