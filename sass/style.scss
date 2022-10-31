@@ -1,6 +1,7 @@
 @import 'reset';
 @import 'header';
 @import 'mixins';
+@import 'rbi';
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
 
 
@@ -95,21 +96,21 @@
 .main-screen {
 	flex: 1 0 100%;
 	position: relative;
+	// TODO: без этих стилей фон не отобржается??
 		&__bg {
+			// position: absolute;
+			width: 100%;
+			height: 100%;
+			// top: 0;
+			// left: 0;
 		}
 }
+
+	
 /* =============================CONTENT================================= */
 .content {
 }
 /* =============================FOOTER================================= */
 .footer {
 }
-
-
-
-
-
-
-
-
 
