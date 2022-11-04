@@ -10,3 +10,16 @@ function rbi() {
 	}
 }
 rbi();
+
+/* Hamburger menu */
+const menuIcon = document.getElementsByClassName('menu__icon')[0]
+const menuBody = document.getElementsByClassName('menu__body')[0]
+const menuBar = document.getElementsByClassName('icon-menu__bar')
+
+
+menuIcon.addEventListener('click', () => {
+  menuBody.classList.toggle('active');
+	for (let item of menuBar) {
+		item.classList.toggle('active');
+	}
+})
