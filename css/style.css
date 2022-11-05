@@ -252,12 +252,30 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
   width: 30px;
   height: 21px;
+  cursor: pointer;
 }
-.icon-menu__bar {
+.icon-menu span {
+  display: block;
+  position: absolute;
+  opacity: 1;
+  left: 0;
   height: 2px;
   width: 100%;
   background-color: #4d4959;
   border-radius: 10px;
+  transition: 0.25s ease-in-out;
+}
+.icon-menu span:nth-child(1) {
+  top: 0px;
+}
+.icon-menu span:nth-child(2) {
+  top: 10px;
+}
+.icon-menu span:nth-child(3) {
+  top: 20px;
+}
+.icon-menu__bar {
+  transform-origin: left;
 }
 
 /* =============================Mobile MENU================================= */
@@ -267,7 +285,6 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 5;
   }
   .menu__body {
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -276,9 +293,11 @@ h1, h2, h3, h4, h5, h6 {
     overflow: auto;
     padding: 150px 0 0 0;
     background-color: #4d4959;
+    transform: translate3d(0px, -100%, 0px);
+    transition: all 0.3s ease 0s;
   }
   .menu__body.active {
-    display: block;
+    transform: translate3d(0px, 0px, 0px);
   }
   .menu__list {
     flex-direction: column;
@@ -308,8 +327,22 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 20px;
     color: azure;
   }
-  .icon-menu__bar.active {
+  .icon-menu.active span {
     background-color: azure;
+  }
+  .icon-menu.active span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 0px;
+    left: 4px;
+  }
+  .icon-menu.active span:nth-child(2) {
+    width: 0%;
+    opacity: 0;
+  }
+  .icon-menu.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 21px;
+    left: 4px;
   }
 }
 /* =============================MAIN-SCREEN================================= */

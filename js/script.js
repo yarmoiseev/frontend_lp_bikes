@@ -19,7 +19,5 @@ const menuBar = document.getElementsByClassName('icon-menu__bar')
 
 menuIcon.addEventListener('click', () => {
   menuBody.classList.toggle('active');
-	for (let item of menuBar) {
-		item.classList.toggle('active');
-	}
+	menuIcon.classList.toggle('active');
 })
