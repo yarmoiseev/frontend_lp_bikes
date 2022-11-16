@@ -21,3 +21,20 @@ menuIcon.addEventListener('click', () => {
   menuBody.classList.toggle('active');
 	menuIcon.classList.toggle('active');
 })
+
+/* swiper.js */
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+	autoHeight: true, 
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+		clickable: true,
+  },
+	slideToClickedSlide: true,
+	grabCursor: true,
+	spaceBetween: 30,
+});
