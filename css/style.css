@@ -512,12 +512,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #f7f7f7;
 }
 .testim__swiper-container {
-  padding: 123px 28px 68px 28px;
-}
-@media (max-width: 1100px) {
-  .testim__swiper-container {
-    padding: 123px 20px 68px 20px;
-  }
+  padding: 123px 40px 68px 40px;
 }
 .testim__slide-item {
   display: flex;
@@ -672,6 +667,7 @@ h1, h2, h3, h4, h5, h6 {
   font-style: italic;
   color: #848789;
 }
+
 .newsletterform {
   display: flex;
   justify-content: center;
@@ -701,6 +697,11 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 24px;
   font-weight: 300;
   color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.7s ease-out;
+}
+.newsletterform__submit:hover {
+  background-color: #3c7861;
 }
 @media (max-width: 500px) {
   .newsletterform {
@@ -717,4 +718,72 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.focus {
+  color: #353738;
+}
+
 /* =============================FOOTER================================= */
+.footer {
+  background-color: #f7f7f7;
+}
+.footer__body {
+  max-width: 1106px;
+  margin: 100px 0 100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer__addresscolumn {
+  text-align: left;
+  flex: 0 1 33.333%;
+}
+.footer__addresscolumn p {
+  font-size: 16px;
+  line-height: 17px;
+  font-weight: 700;
+  color: #848789;
+}
+.footer__addresscolumn p:nth-child(2), .footer__addresscolumn p:nth-child(3) {
+  font-size: 13.9px;
+  font-weight: 400;
+  font-style: italic;
+}
+@media (max-width: 600px) {
+  .footer__body {
+    flex-direction: column;
+  }
+  .footer__addresscolumn {
+    text-align: center;
+  }
+  .footer__socialscolumn {
+    margin: 15px 0;
+  }
+}
+
+.socials {
+  display: flex;
+  flex: 0 1 33.333%;
+  justify-content: center;
+  max-height: 35px;
+}
+.socials__facebook {
+  margin: 0 15px;
+}
+
+.madeby {
+  display: flex;
+  flex: 0 1 33.333%;
+  justify-content: flex-end;
+}
+.madeby__text {
+  min-width: 88.2px;
+  margin: 0 10px 0 0;
+  padding: 8px 0 0 0;
+  display: inline-block;
+  font-family: Lato;
+  font-size: 13.9px;
+  line-height: 17px;
+  font-weight: 400;
+  font-style: italic;
+  color: #848789;
+}

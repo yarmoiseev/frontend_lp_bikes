@@ -31,7 +31,6 @@
 	position: absolute;
 	width: 100%;
   z-index: 10;
-  // left: 0;
   top: 35px;
 	@media (max-width: 767px) {
 		top: 15px;
@@ -42,9 +41,6 @@
 			align-items: center;
 			height: 85px;
 		}
-		&__menu {
-
-		}
 		&__logo {
 			position: absolute;
 			left: 50%;
@@ -54,11 +50,6 @@
 		}
 }
 .menu {
-		&__icon {
-		}
-		&__body {
-
-		}
 		&__list {
 			display: flex;
 			& li{
@@ -111,7 +102,6 @@
 	width: 30px;
 	height: 21px;
   cursor: pointer;
-
 	& span{
 		display: block;
 		position: absolute;
@@ -144,8 +134,7 @@
 }
 /* =============================Mobile MENU================================= */
 @media (max-width: 767px) {
-	.menu {
-		
+	.menu {	
 			&__icon {
 				display: flex;
 				z-index: 5;
@@ -159,7 +148,6 @@
 				overflow: auto;
 				padding: 150px 0 0 0;
 				background-color: #4d4959;
-				
 				transform: translate3d(0px, -100%, 0px);
 				transition: all 0.3s ease 0s;
 				&.active {
@@ -230,18 +218,12 @@
 	flex: 1 0 100%;
 	position: relative;
 		&__bg {
-			// position: absolute;
 			width: 100%;
 			height: 100%;
-			// top: 0;
-			// left: 0;
 		}
 }
-
-	
 /* =============================CONTENT================================= */
-.content {
-}
+
 /* =============================NEWGEN================================= */
 .newgen {
 	background-color: #f7f7f7;
@@ -308,8 +290,6 @@
 			position: relative;
 			flex: 0 1 33.32%;
 		}
-	}
-	&__item {
 	}
 	&__about {
 		padding: 70px 65px 55px 65px;
@@ -395,10 +375,7 @@
 .testim {
 	background-color: #f7f7f7;
 	&__swiper-container {
-		padding: 123px 28px 68px 28px;
-		@media(max-width: 1100px){
-			padding: 123px 20px 68px 20px;
-		}
+		padding: 123px 40px 68px 40px;
 	}
 	&__slide-item {
 		display: flex;
@@ -564,9 +541,6 @@
 		font-style: italic;
 		color: #848789;
 	}
-	&__form {
-
-	}
 }
 .newsletterform {
 	display: flex;
@@ -596,6 +570,11 @@
 		line-height: 24px;
 		font-weight: 300;
 		color: #ffffff;
+		cursor: pointer;
+		transition: background-color 0.7s ease-out;
+		&:hover{
+			background-color: #3c7861;
+		}
 	}
 	@media(max-width: 500px){
 		flex-wrap: wrap;
@@ -610,8 +589,72 @@
 		}
 	}
 }
-//TODO email validation and button animation
+.focus {
+	color: #353738;
+}
 /* =============================FOOTER================================= */
 .footer {
+	background-color: #f7f7f7;
+	&__body {
+		max-width: 1106px;
+		margin: 100px 0 100px 0;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__addresscolumn {
+		text-align: left;
+		flex: 0 1 33.333%;
+		& p{
+			font-size: 16px;
+			line-height: 17px;
+			font-weight: 700;
+			color: #848789;
+		}
+		& p:nth-child(2), p:nth-child(3){
+			font-size: 13.9px;
+			font-weight: 400;
+			font-style: italic;
+		}
+	}
+	@media(max-width: 600px){
+		&__body {
+			flex-direction: column;
+		}
+		&__addresscolumn {
+			text-align: center;
+		}
+		&__socialscolumn {
+			margin: 15px 0;
+		}
+	}
 }
+
+.socials {
+	display: flex;
+	flex: 0 1 33.333%;
+	justify-content: center;
+	max-height: 35px;
+	&__facebook {
+		margin: 0 15px;
+	}
+}
+.madeby {
+	display: flex;
+	flex: 0 1 33.333%;
+	justify-content: flex-end;
+	&__text {
+		min-width: 88.2px;
+		margin: 0 10px 0 0;
+    padding: 8px 0 0 0;
+		display: inline-block;
+		font-family: Lato;
+		font-size: 13.9px;
+		line-height: 17px;
+		font-weight: 400;
+		font-style: italic;
+		color: #848789;
+	}
+}
+
 

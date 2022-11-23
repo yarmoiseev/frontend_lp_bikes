@@ -36,5 +36,42 @@ const swiper = new Swiper('.swiper', {
   },
 	slideToClickedSlide: true,
 	grabCursor: true,
-	spaceBetween: 30,
+	spaceBetween: 50,
+});
+
+/* e-mail validation */
+const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+const input = document.querySelectorAll('input[type=email]');
+
+function isEmailValid(value) {
+ 	return EMAIL_REGEXP.test(value);
+}
+
+function onFocusOut() {
+	for (const el of input) {
+		if (isEmailValid(el.value)) {
+			el.style.borderColor = '#32a852';
+		} else {
+			el.style.borderColor = '#a83232';
+		}
+	}
+}
+
+function onClick() {
+	for (const el of input) {
+		el.style.borderColor = '#d3d7d9';
+		el.placeholder = '';
+	}
+}
+
+function onFocus() {
+	for (const el of input) {
+		el.classList.add("focus");
+	}
+}
+
+input.forEach(i => {
+	i.addEventListener('focusout', onFocusOut);
+	i.addEventListener('click', onClick);
+	i.addEventListener('focus', onFocus);
 });
