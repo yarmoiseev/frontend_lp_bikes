@@ -42,6 +42,7 @@ const swiper = new Swiper('.swiper', {
 /* e-mail validation */
 const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
 const input = document.querySelectorAll('input[type=email]');
+const inputparent = document.querySelector('.newsletter');
 
 function isEmailValid(value) {
  	return EMAIL_REGEXP.test(value);
@@ -70,8 +71,20 @@ function onFocus() {
 	}
 }
 
-input.forEach(i => {
-	i.addEventListener('focusout', onFocusOut);
-	i.addEventListener('click', onClick);
-	i.addEventListener('focus', onFocus);
+inputparent.addEventListener('focusout', function(event) {
+	if (event.target.closest('input')) {
+		onFocusOut();
+	}
 });
+
+inputparent.addEventListener('click', function(event) {
+	if (event.target.closest('input')) {
+		onClick();
+	}
+});
+
+inputparent.addEventListener('focus', function(event) {
+	if (event.target.closest('input')) {
+		onFocus();
+	}
+}, true);
